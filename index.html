@@ -12,7 +12,7 @@
     <!-- top banner  -->
     <section id="top-banner" class="bg-black py-12 text-center">
         <h1 class="text-orange-600 py-2 font-bold text-5xl">Select Your Five-A-Side Team</h1>
-        <p class="text-white text-xs font-light">From the featured twelve players of Paris Saint Germain Team, select your five-a-side team to compete with other teams.</p>ta
+        <p class="text-white text-sm font-light">From the featured twelve players of Paris Saint Germain Team, select your five-a-side team to compete with other teams.</p>
     </section>
     <!-- main section  -->
     <main class="flex justify-center text-white my-6 gap-3">
@@ -60,7 +60,49 @@
                 <p class="font-thin text-xs text-stone-400">CM</p>
                 <button id="btn-machado" class="font-bold text-base my-2 bg-blue-800 py-1 px-11">SELECT</button>
             </div>
-            
+            <!-- machado card -->
+            <div class="bg-black w-44 h-60 text-center border border-1 border-stone-400">
+                <img src="images/Vítor Machado.jpg" alt="">
+                <h3 class="text-lg font-bold p-1">Vitor Machado</h3>
+                <p class="font-thin text-xs text-stone-400">CM</p>
+                <button id="btn-machado" class="font-bold text-base my-2 bg-blue-800 py-1 px-11">SELECT</button>
+            </div>
+            <!-- machado card -->
+            <div class="bg-black w-44 h-60 text-center border border-1 border-stone-400">
+                <img src="images/Vítor Machado.jpg" alt="">
+                <h3 class="text-lg font-bold p-1">Vitor Machado</h3>
+                <p class="font-thin text-xs text-stone-400">CM</p>
+                <button id="btn-machado" class="font-bold text-base my-2 bg-blue-800 py-1 px-11">SELECT</button>
+            </div>
+            <!-- machado card -->
+            <div class="bg-black w-44 h-60 text-center border border-1 border-stone-400">
+                <img src="images/Vítor Machado.jpg" alt="">
+                <h3 class="text-lg font-bold p-1">Vitor Machado</h3>
+                <p class="font-thin text-xs text-stone-400">CM</p>
+                <button id="btn-machado" class="font-bold text-base my-2 bg-blue-800 py-1 px-11">SELECT</button>
+            </div>
+            <!-- machado card -->
+            <div class="bg-black w-44 h-60 text-center border border-1 border-stone-400">
+                <img src="images/Vítor Machado.jpg" alt="">
+                <h3 class="text-lg font-bold p-1">Vitor Machado</h3>
+                <p class="font-thin text-xs text-stone-400">CM</p>
+                <button id="btn-machado" class="font-bold text-base my-2 bg-blue-800 py-1 px-11">SELECT</button>
+            </div>
+            <!-- machado card -->
+            <div class="bg-black w-44 h-60 text-center border border-1 border-stone-400">
+                <img src="images/Vítor Machado.jpg" alt="">
+                <h3 class="text-lg font-bold p-1">Vitor Machado</h3>
+                <p class="font-thin text-xs text-stone-400">CM</p>
+                <button id="btn-machado" class="font-bold text-base my-2 bg-blue-800 py-1 px-11">SELECT</button>
+            </div>
+            <!-- machado card -->
+            <div class="bg-black w-44 h-60 text-center border border-1 border-stone-400">
+                <img src="images/Vítor Machado.jpg" alt="">
+                <h3 class="text-lg font-bold p-1">Vitor Machado</h3>
+                <p class="font-thin text-xs text-stone-400">CM</p>
+                <button id="btn-machado" class="font-bold text-base my-2 bg-blue-800 py-1 px-11">SELECT</button>
+            </div>
+        
         </section>
         
         <!-- selected and budget section  -->
@@ -73,7 +115,7 @@
                 </ol>
             </div>
             <!-- budget section  -->
-            <div class="bg-black w-48 font-light text-xs text-stone-300 px-3 flex flex-col align-center mt-4">
+            <div class="bg-black w-48 h-80 font-light text-xs text-stone-300 px-3 flex flex-col align-center mt-4">
                 <h3 class="text-lg font-bold p-2 text-white text-center">Budget</h3>
                 <!-- per player cost  -->
                 <div>
@@ -84,36 +126,42 @@
                 <!-- Calculate button  -->
                 <button id="btn-calculate" class="font-semibold text-base my-4 bg-blue-800 py-1"><p>Calculate</p></button>
                 <!-- player expenses  -->
-                <div>
-                    <span>Player Explenses
-                    </span><span id="player-expenses">$5000</span>
+                <div class="pb-3">
+                    <span>Player Explenses $
+                    </span><span id="player-expenses">5000</span>
                 </div>
                 <!-- manager and coach expenses  -->
                 <div>
                     <!-- manager cost  -->
-                    <div>
+                    <div class="pb-3">
                         <span>Manager</span> 
-                        <input class="border border-1 border-white bg-black text-white w-20 h-6 ml-5 pl-2" type="number" name="" id=""> 
+                        <input id="manager-cost" class="border border-1 border-white bg-black text-white w-20 h-6 ml-5 pl-2" type="number" name=""> 
                     </div>
                     <!-- coach cost  -->
                     <div>
                         <span>Coach</span> 
-                        <input class="border border-1 border-white bg-black text-white w-20 h-6 ml-5 pl-2" type="number" name="" id="">
+                        <input id="coach-cost" class="border border-1 border-white bg-black text-white w-20 h-6 ml-5 pl-2" type="number" name="">
                     </div>
                 </div>
 
-                <!-- Calculate button  -->
+                <!-- total calculate button  -->
 
-                <button id="btn-calculate" class="font-semibold text-base my-4 bg-blue-800 py-1"><p>Calculate Total</p></button>
+                <button id="btn-total-calculate" class="font-semibold text-base my-4 bg-blue-800 py-1"><p>Calculate Total</p></button>
 
-                <div class="mb-4">
-                    <span>Total </span><span id="total-expenses text-orange-600">$</span>
+                <!-- total expenses  -->
+                <div>
+                    <span>Total Expenses $
+                    </span><span id="total-expenses" class="text-orange-600 mb-4"></span>
                 </div>
             </div>
-  
+
         </section>
     </main>
+    <hr>
 
+    <footer>
+        <p class="text-white text-sm font-light p-16 text-center">Copyright © 2022 All Rights Reserved</p>
+    </footer>
     <script src="js/script.js"></script>
     <script src="js/utilities.js"></script>
 </body>

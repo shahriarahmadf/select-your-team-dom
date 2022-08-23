@@ -55,8 +55,29 @@ document.getElementById('btn-calculate').addEventListener('click',function(){
     const playerExpenses = perPlayerCost*5;
 
     playerExpensesUpdate = document.getElementById('player-expenses');
-    playerExpensesUpdate.innerText = '$' + playerExpenses;
+    playerExpensesUpdate.innerText = playerExpenses;
     // clear the textbox
     perPlayer.value = '';
 });
 
+// total expenses
+
+document.getElementById('btn-total-calculate').addEventListener('click',function(){
+    // get player cost
+    const playerExpenses = parseFloat(document.getElementById('player-expenses').innerText);
+
+    // manager cost
+    const manager = (document.getElementById('manager-cost'));
+    const managerCost = parseFloat(manager.value);
+    // coach cost
+    const coach = (document.getElementById('coach-cost'));
+    const coachCost = parseFloat(coach.value);
+
+    const totalCost = playerExpenses + managerCost + coachCost;
+
+    totalExpensesUpdate = document.getElementById('total-expenses');
+    totalExpensesUpdate.innerText = totalCost;
+    // clear the textbox
+    manager.value = '';
+    coach.value = '';
+});
