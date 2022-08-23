@@ -4,46 +4,84 @@ const numberOfSelectedPlayers = document.getElementById('selected-players').getE
 // select messi
 btnMessi = document.getElementById('btn-messi');
 btnMessi.addEventListener('click',function(event){
-    playerAdder('Lionel Messi');
-    btnMessi.setAttribute('disabled',true);
-    event.target.style.backgroundColor = 'grey';
+    const run = playerAdder('Lionel Messi');
+    if (run == true){
+        btnMessi.setAttribute('disabled',true);
+        event.target.style.backgroundColor = 'grey';
+    }
 });
 // select neymar
 btnNeymar = document.getElementById('btn-neymar');
 btnNeymar.addEventListener('click',function(event){
-    playerAdder('Neymar JR');
-    btnNeymar.setAttribute('disabled',true);
-    event.target.style.backgroundColor = 'grey';
+    const run = playerAdder('Neymar JR');
+    if (run == true){
+        btnNeymar.setAttribute('disabled',true);
+        event.target.style.backgroundColor = 'grey';
+    }
 });
 // select mbappe
 btnMbappe = document.getElementById('btn-mbappe');
 btnMbappe.addEventListener('click',function(event){
-    playerAdder('Kylian Mbappe');
-    btnMbappe.setAttribute('disabled',true);
-    event.target.style.backgroundColor = 'grey';
+    const run = playerAdder('Kylian Mbappe');
+    if (run == true){
+        btnMbappe.setAttribute('disabled',true);
+        event.target.style.backgroundColor = 'grey';
+    }
 });
 // select ramos
 btnRamos = document.getElementById('btn-ramos');
 btnRamos.addEventListener('click',function(event){
-    playerAdder('Sergio Ramos');
-    btnRamos.setAttribute('disabled',true);
-    event.target.style.backgroundColor = 'grey';
+    const run = playerAdder('Sergio Ramos');
+    if (run == true){
+        btnRamos.setAttribute('disabled',true);
+        event.target.style.backgroundColor = 'grey';
+    }
 });
 // select renato
 btnRenato = document.getElementById('btn-renato');
 btnRenato.addEventListener('click',function(event){
-    playerAdder('Renato Sanchos');
-    btnRenato.setAttribute('disabled',true);
-    event.target.style.backgroundColor = 'grey';
+    const run = playerAdder('Renato Sanchos');
+    if (run == true){
+        btnRenato.setAttribute('disabled',true);
+        event.target.style.backgroundColor = 'grey';
+    }
 });
 // select machado
 btnMachado = document.getElementById('btn-machado');
 btnMachado.addEventListener('click',function(event){
-    playerAdder('Renato Sanchos');
-    btnMachado.setAttribute('disabled',true);
-    event.target.style.backgroundColor = 'grey';
+    const run = playerAdder('Renato Sanchos');
+    if (run == true){
+        btnMachado.setAttribute('disabled',true);
+        event.target.style.backgroundColor = 'grey';
+    }
 });
-
+// select hakimi
+btnHakimi = document.getElementById('btn-hakimi');
+btnHakimi.addEventListener('click',function(event){
+    const run = playerAdder('Achraf Hakimi');
+    if (run == true){
+        btnHakimi.setAttribute('disabled',true);
+        event.target.style.backgroundColor = 'grey';
+    }
+});
+// select donnarumma
+btnDonnarumma = document.getElementById('btn-donnarumma');
+btnDonnarumma.addEventListener('click',function(event){
+    const run = playerAdder('Donnarumma');
+    if (run == true){
+        btnDonnarumma.setAttribute('disabled',true);
+        event.target.style.backgroundColor = 'grey';
+    }
+});
+// select marquinhos
+btnMarquinhos = document.getElementById('btn-marquinhos');
+btnMarquinhos.addEventListener('click',function(event){
+    const run = playerAdder('Marquinhos');
+    if (run == true){
+        btnMarquinhos.setAttribute('disabled',true);
+        event.target.style.backgroundColor = 'grey';
+    }
+});
 
 // BUDGET SECTION
 
@@ -55,10 +93,10 @@ document.getElementById('btn-calculate').addEventListener('click',function(){
     const perPlayerCost = parseFloat(perPlayer.value);
 
     // error handling
-    if ((numberOfSelectedPlayers<1) || (isNaN(perPlayerCost))){
+    if ((numberOfSelectedPlayers<1) || (isNaN(perPlayerCost)) || (perPlayerCost<0)){
         // clear the textbox
         perPlayer.value = '';
-        return alert('Error: No player selected or per player expense is not written.');
+        return alert('Error: No player selected, or per expense is negative or not written.');
     }
 
     const playerExpenses = perPlayerCost*numberOfSelectedPlayers;
@@ -84,11 +122,11 @@ document.getElementById('btn-total-calculate').addEventListener('click',function
     const totalCost = playerExpenses + managerCost + coachCost;
 
     // error handling
-    if (isNaN(totalCost)){
+    if (isNaN(totalCost) || (playerExpenses<0) || (managerCost<0) || (coachCost<0)){
         // clear the textbox
         manager.value = '';
         coach.value = '';
-        return alert('Error: Manager and/or coach expense is/are not added.');
+        return alert('Error: Manager and/or coach expense is/are not added. Or any of the costs is/are negative.');
     }
 
 

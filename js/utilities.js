@@ -6,10 +6,10 @@ function playerAdder(playerName){
     // number of selected players
     const numberOfSelectedPlayers = numberOfPlayers();
 
-    // check if number is already five
+    // error handling: check if number is already five
     if(numberOfSelectedPlayers>=5){
-        alert('Already selected five, cannot select more.');
-        return;
+        alert('Error: Already selected five, cannot select more.');
+        return false;
     }
     
     // what to add
@@ -22,6 +22,7 @@ function playerAdder(playerName){
     // update player number on top
     const playerNumberUpdate = document.getElementById('number-of-selected-players');
     playerNumberUpdate.innerText = 'Selected - ' + (numberOfSelectedPlayers + 1);
+    return true;
 }
 
 function numberOfPlayers(){     
