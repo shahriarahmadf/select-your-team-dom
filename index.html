@@ -67,8 +67,8 @@
         <section>
             <!-- selected section  -->
             <div class="bg-black w-48 h-60 text-center mb-3">
-                <h3 class="text-lg font-bold p-2">Selected -</h3><span id="number-of-selected-players"></span>
-                <ol id="selected-players" class="list-decimal list-inside">
+                <h3 id="number-of-selected-players" class="text-lg font-bold p-2">Selected - 0</h3>
+                <ol id="selected-players" class="list-decimal list-inside space-y-3">
                     <!-- players will be added using JS -->
                 </ol>
             </div>
@@ -79,7 +79,7 @@
                 <div>
                     <span>Per Player</span> 
                     <!-- per player cost input -->
-                    <input class="border border-1 border-white bg-black text-white w-20 h-6 ml-5 pl-2" type="number" name="" id=""> 
+                    <input id="per-player" class="border border-1 border-white bg-black text-white w-20 h-6 ml-5 pl-2" type="number" name="" id=""> 
                 </div>
                 <!-- Calculate button  -->
                 <button id="btn-calculate" class="font-semibold text-base my-4 bg-blue-800 py-1"><p>Calculate</p></button>

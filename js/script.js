@@ -1,5 +1,5 @@
 // number of selected players
-
+const numberOfSelectedPlayers = document.getElementById('selected-players').getElementsByTagName('li').length;
 
 // select messi
 btnMessi = document.getElementById('btn-messi');
@@ -45,9 +45,18 @@ btnMachado.addEventListener('click',function(event){
 });
 
 
+// BUDGET SECTION
 
+// per player expenses
+document.getElementById('btn-calculate').addEventListener('click',function(){
+    const perPlayer = (document.getElementById('per-player'));
+    const perPlayerCost = parseFloat(perPlayer.value);
 
+    const playerExpenses = perPlayerCost*5;
 
-
-
+    playerExpensesUpdate = document.getElementById('player-expenses');
+    playerExpensesUpdate.innerText = '$' + playerExpenses;
+    // clear the textbox
+    perPlayer.value = '';
+});
 

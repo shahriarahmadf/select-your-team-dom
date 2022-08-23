@@ -18,5 +18,9 @@ function playerAdder(playerName){
 
     // add the child
     selectedPlayers.appendChild(li);
+
+    // update player number on top
+    const playerNumberUpdate = document.getElementById('number-of-selected-players');
+    playerNumberUpdate.innerText = 'Selected - ' + (numberOfSelectedPlayers + 1);
 }
 
