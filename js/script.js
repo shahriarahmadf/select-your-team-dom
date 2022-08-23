@@ -49,15 +49,23 @@ btnMachado.addEventListener('click',function(event){
 
 // per player expenses
 document.getElementById('btn-calculate').addEventListener('click',function(){
+    let numberOfSelectedPlayers = numberOfPlayers();
+
     const perPlayer = (document.getElementById('per-player'));
     const perPlayerCost = parseFloat(perPlayer.value);
 
-    const playerExpenses = perPlayerCost*5;
+    // error handling
+    if ((numberOfSelectedPlayers<1) || (isNaN(perPlayerCost))){
+        // clear the textbox
+        perPlayer.value = '';
+        return alert('Error: No player selected or per player expense is not written.');
+    }
+
+    const playerExpenses = perPlayerCost*numberOfSelectedPlayers;
 
     playerExpensesUpdate = document.getElementById('player-expenses');
     playerExpensesUpdate.innerText = playerExpenses;
-    // clear the textbox
-    perPlayer.value = '';
+
 });
 
 // total expenses
@@ -75,9 +83,16 @@ document.getElementById('btn-total-calculate').addEventListener('click',function
 
     const totalCost = playerExpenses + managerCost + coachCost;
 
+    // error handling
+    if (isNaN(totalCost)){
+        // clear the textbox
+        manager.value = '';
+        coach.value = '';
+        return alert('Error: Manager and/or coach expense is/are not added.');
+    }
+
+
     totalExpensesUpdate = document.getElementById('total-expenses');
     totalExpensesUpdate.innerText = totalCost;
-    // clear the textbox
-    manager.value = '';
-    coach.value = '';
+
 });

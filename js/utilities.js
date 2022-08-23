@@ -4,7 +4,7 @@ function playerAdder(playerName){
     const selectedPlayers = document.getElementById('selected-players');
     
     // number of selected players
-    const numberOfSelectedPlayers = selectedPlayers.getElementsByTagName('li').length;
+    const numberOfSelectedPlayers = numberOfPlayers();
 
     // check if number is already five
     if(numberOfSelectedPlayers>=5){
@@ -24,3 +24,8 @@ function playerAdder(playerName){
     playerNumberUpdate.innerText = 'Selected - ' + (numberOfSelectedPlayers + 1);
 }
 
+function numberOfPlayers(){     
+    const selectedPlayers = document.querySelectorAll('li');     
+    const numberOfPlayers = selectedPlayers.length;     
+    return numberOfPlayers; 
+}
